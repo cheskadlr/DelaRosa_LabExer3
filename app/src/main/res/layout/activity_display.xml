@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.delarosa.delarosa_labexer3.DisplayActivity"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvViewFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="18dp"
+        android:text="Filename:"
+        android:textColor="@color/colorBlack"/>
+
+    <EditText
+        android:id="@+id/etViewFilename"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvViewFilename"
+        android:layout_alignBottom="@+id/tvViewFilename"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_toRightOf="@+id/tvViewFilename"
+        android:ems="10"
+        android:hint="*.txt"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/etViewData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Data goes here"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:textStyle="italic|bold"
+        android:textColor="@color/colorPrimary"
+        android:layout_below="@+id/etViewFilename"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnViewSharedPrefs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="viewSharedPrefs"
+        android:text="Shared Preferences"
+        android:layout_below="@+id/etViewData"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/btnViewIntStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnViewSharedPrefs"
+        android:layout_alignStart="@+id/btnViewSharedPrefs"
+        android:layout_below="@+id/btnViewSharedPrefs"
+        android:onClick="viewIntStorage"
+        android:text="Internal Storage" />
+
+    <Button
+        android:id="@+id/btnViewExtStorage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtCache"
+        android:layout_centerHorizontal="true"
+        android:onClick="viewExtStorage"
+        android:text="External Storage" />
+
+    <Button
+        android:id="@+id/btnViewIntCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntStorage"
+        android:layout_centerHorizontal="true"
+        android:onClick="viewIntCache"
+        android:text="Internal Cache" />
+
+    <Button
+        android:id="@+id/btnViewExtCache"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewIntCache"
+        android:layout_centerHorizontal="true"
+        android:onClick="viewExtCache"
+        android:text="External Cache" />
+
+    <Button
+        android:id="@+id/btnViewExtPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnViewExtStorage"
+        android:layout_centerHorizontal="true"
+        android:onClick="viewExtPublic"
+        android:text="External Public Storage" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="goToMainActivity"
+        android:text="Previous" />
+
+</RelativeLayout>
